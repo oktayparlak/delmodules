@@ -11,19 +11,30 @@ A simple CLI tool to recursively clean up `node_modules` directories in your Nod
 - 🔒 Safe deletion process
 - 📘 Written in TypeScript
 - 🛡️ Type definitions included
+- 🧶 Yarn support
 
 ## Installation
 
-You can install the package either via npm:
+You can install the package using npm:
 
 ```bash
 npm install -g delmodules
 ```
 
+Or using yarn:
+
+```bash
+yarn global add delmodules
+```
+
 Or directly from GitHub:
 
 ```bash
+# Using npm
 npm install -g github:oktayparlak/delmodules
+
+# Using yarn
+yarn global add https://github.com/oktayparlak/delmodules.git
 ```
 
 ## Repository
@@ -67,13 +78,35 @@ cd delmodules
 2. Install dependencies:
 
 ```bash
+# Using npm
 npm install
+
+# Using yarn
+yarn install
 ```
 
-### Build
+### Available Scripts
 
 ```bash
+# Build the project
 npm run build
+# or
+yarn build
+
+# Development mode with watch
+npm run dev
+# or
+yarn dev
+
+# Clean build files
+npm run clean
+# or
+yarn clean
+
+# Start the compiled app
+npm start
+# or
+yarn start
 ```
 
 This will compile the TypeScript code to JavaScript in the `dist` directory.

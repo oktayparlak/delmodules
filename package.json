@@ -1,6 +1,6 @@
 {
   "name": "delmodules",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Recursively delete all node_modules folders in a directory",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,19 +9,25 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "clean": "rimraf dist",
+    "prebuild": "yarn clean",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
   },
   "keywords": [
     "node_modules",
     "cleanup",
     "delete",
     "recursive",
-    "typescript"
+    "typescript",
+    "yarn"
   ],
   "author": "Oktay",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "rimraf": "^5.0.10",
     "typescript": "^5.3.3"
   },
   "repository": {
@@ -31,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/oktayparlak/delmodules/issues"
   },
-  "homepage": "https://github.com/oktayparlak/delmodules#readme"
+  "homepage": "https://github.com/oktayparlak/delmodules#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }
