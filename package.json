@@ -1,0 +1,27 @@
+{
+  "name": "delmodules",
+  "version": "1.1.0",
+  "description": "Recursively delete all node_modules folders in a directory",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "delmodule": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "node_modules",
+    "cleanup",
+    "delete",
+    "recursive",
+    "typescript"
+  ],
+  "author": "Oktay",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
