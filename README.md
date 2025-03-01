@@ -48,7 +48,7 @@ GitHub: [https://github.com/oktayparlak/delmodules](https://github.com/oktayparl
 To delete the `node_modules` directory in your current location:
 
 ```bash
-delmodule
+delmodules
 ```
 
 ### Clean All Subdirectories Recursively
@@ -56,7 +56,7 @@ delmodule
 To recursively delete all `node_modules` directories in the current directory and all its subdirectories:
 
 ```bash
-delmodule --all
+delmodules --all
 ```
 
 ## Development
