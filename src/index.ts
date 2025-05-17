@@ -7,14 +7,14 @@ import { Dirent } from "fs";
 function deleteNodeModules(dir: string, recursive: boolean = false): void {
   console.log(`Scanning: ${dir}`);
 
-  // Mevcut dizindeki node_modules'u kontrol et
+  // Check for node_modules in the current directory
   const nodeModulesPath: string = join(dir, "node_modules");
   if (existsSync(nodeModulesPath)) {
     console.log(`Deleting: ${nodeModulesPath}`);
     rmSync(nodeModulesPath, { recursive: true, force: true });
   }
 
-  // Eğer recursive mod aktifse, alt dizinleri de tara
+  // If recursive mode is active, scan subdirectories too
   if (recursive) {
     readdirSync(dir, { withFileTypes: true }).forEach((dirent: Dirent) => {
       const fullPath: string = join(dir, dirent.name);
